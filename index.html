@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TastyBites — fresh ingredients, authentic flavors, and memorable meals.">
+  <title>TastyBites | Good Food, Good Mood</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="logo" href="#home" aria-label="TastyBites home"><span class="logo-icon">♨</span> Tasty<span>Bites</span></a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav class="nav-links" id="nav-links" aria-label="Main navigation">
+        <a href="#home">Home</a><a href="#menu">Menu</a><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
+      </nav>
+      <a class="button button-primary nav-cta" href="#reservation">Reserve a Table</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <p class="eyebrow">GOOD FOOD · GREAT PEOPLE · MEMORABLE MOMENTS</p>
+        <h1>Delicious Food<br>For <span>Every Mood</span></h1>
+        <p class="hero-text">Fresh ingredients. Authentic flavors. A warm atmosphere.<br class="desktop-break"> Experience the best food in town.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#menu">View Menu <span>→</span></a><a class="button button-outline" href="#reservation">Book a Table</a></div>
+      </div>
+      <div class="hero-badge"><span>✦</span><strong>Freshly made</strong><small>with love, every day</small></div>
+    </section>
+
+    <section class="section menu-section" id="menu">
+      <div class="container">
+        <div class="section-heading"><p class="eyebrow">A LITTLE SOMETHING FOR EVERYONE</p><h2>Our Special <span>Menu</span></h2><p>Handpicked dishes made with love.</p></div>
+        <div class="filters" role="group" aria-label="Filter menu">
+          <button class="filter active" data-category="All">All</button><button class="filter" data-category="Pizza">Pizza</button><button class="filter" data-category="Indian">Indian</button><button class="filter" data-category="Pasta">Pasta</button><button class="filter" data-category="Burgers">Burgers</button><button class="filter" data-category="Drinks">Drinks</button>
+        </div>
+        <div class="menu-grid" id="menu-grid"></div>
+      </div>
+    </section>
+
+    <section class="about-section section" id="about">
+      <div class="container about-grid">
+        <div class="about-copy"><p class="eyebrow">OUR STORY</p><h2>Good Food Brings<br><span>People Together</span></h2><p>At TastyBites, we believe great food creates great connections. Our chefs use fresh, high-quality ingredients to craft delicious meals that bring families and friends together.</p><p>From quick lunches to slow, cozy dinners, there’s always a seat waiting for you.</p><a class="button button-primary" href="#reservation">Come Say Hello</a></div>
+        <div class="about-image"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1000&q=85" alt="Warmly lit restaurant dining room" loading="lazy"><div class="image-note"><strong>Good Food</strong><span>Good Mood ✦</span></div></div>
+      </div>
+    </section>
+
+    <section class="section gallery-section" id="gallery">
+      <div class="container">
+        <div class="section-heading"><p class="eyebrow">MADE FRESH, SERVED WITH LOVE</p><h2>A Feast for <span>Your Eyes</span></h2><p>Some of our favorite moments and flavors.</p></div>
+        <div class="gallery-grid">
+          <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=85" alt="Restaurant favorite dish" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80'">
+          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=85" alt="Freshly prepared pizza" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=85" alt="Grilled food prepared by the chef" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=85" alt="Juicy gourmet burger" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="reservation-section section" id="reservation">
+      <div class="container reservation-grid">
+        <div><p class="eyebrow">YOUR TABLE IS WAITING</p><h2>Make it a meal<br><span>to remember.</span></h2><p>Planning a date night, family dinner, or catch-up with friends? Reserve your spot.</p><div class="reservation-detail"><span>✦</span><div><strong>Good food. No rush.</strong><small>Relax, unwind, and enjoy every bite.</small></div></div></div>
+        <form id="reservation-form" class="reservation-form">
+          <h3>Reserve a Table</h3><p class="form-intro">Fill in your details and we’ll be in touch.</p>
+          <div class="form-row"><div><label for="guest-name">Your name</label><input id="guest-name" name="name" placeholder="Full name" required maxlength="80"></div><div><label for="guest-phone">Phone number</label><input id="guest-phone" name="phone" type="tel" placeholder="+91 98765 43210" required maxlength="20"></div></div>
+          <div class="form-row"><div><label for="reservation-date">Date</label><input id="reservation-date" name="date" type="date" required></div><div><label for="reservation-time">Time</label><select id="reservation-time" name="time" required><option value="">Choose a time</option><option>11:00 AM</option><option>12:00 PM</option><option>1:00 PM</option><option>2:00 PM</option><option>6:00 PM</option><option>7:00 PM</option><option>8:00 PM</option><option>9:00 PM</option></select></div></div>
+          <div class="form-row"><div><label for="guest-count">Guests</label><select id="guest-count" name="guests"><option>1 person</option><option selected>2 people</option><option>3 people</option><option>4 people</option><option>5 people</option><option>6 people</option><option>7+ people</option></select></div><div><label for="guest-notes">Special request (optional)</label><input id="guest-notes" name="notes" placeholder="Window seat, allergies…"></div></div>
+          <button class="button button-primary full-width" type="submit">Request Reservation →</button><p class="form-note" id="reservation-message" aria-live="polite">Demo form: requests are not sent to a restaurant.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section testimonials">
+      <div class="container testimonial-inner"><p class="eyebrow">KIND WORDS</p><h2>Good food, <span>happy people.</span></h2><div class="quote-mark">“</div><blockquote id="quote">The food was incredible, the atmosphere was warm, and the staff made us feel right at home.</blockquote><p class="reviewer" id="reviewer">— Priya S.</p><div class="quote-controls"><button id="prev-quote" aria-label="Previous review">←</button><button id="next-quote" aria-label="Next review">→</button></div></div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="container footer-grid">
+      <div class="footer-brand"><a class="logo logo-light" href="#home"><span class="logo-icon">♨</span> Tasty<span>Bites</span></a><p>Delicious food. Happy people.<br>See you at TastyBites!</p><div class="socials"><a href="#contact" aria-label="Instagram">ig</a><a href="#contact" aria-label="Facebook">f</a><a href="#contact" aria-label="YouTube">▶</a></div></div>
+      <div><h3>Quick Links</h3><a href="#home">Home</a><a href="#menu">Menu</a><a href="#about">About us</a><a href="#gallery">Gallery</a><a href="#reservation">Reservations</a></div>
+      <div><h3>Contact Us</h3><p>⌖ &nbsp;123 Food Street, Coimbatore</p><p>☎ &nbsp;+91 98765 43210</p><p>✉ &nbsp;hello@tastybites.example</p></div>
+      <div><h3>Opening Hours</h3><p>Mon – Fri &nbsp; 11:00 AM – 11:00 PM</p><p>Sat – Sun &nbsp; 10:00 AM – 12:00 AM</p><a class="footer-reserve" href="#reservation">Book your table →</a></div>
+    </div>
+    <div class="container copyright"><span>© <span id="year"></span> TastyBites. All rights reserved.</span><span>Made with ♥ for food lovers</span></div>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
